@@ -22,7 +22,7 @@ namespace Workly.Controllers
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "TOP employers";
 
             return View();
         }

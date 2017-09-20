@@ -12,18 +12,22 @@
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
+                <a class="navbar-brand" href="@Url.Action("Index", "Home")">
+                    <img src="https://cdn0.iconfinder.com/data/icons/thin-analytics/24/thin-0394_business_handshake_deal_contract_sign-512.png" alt="Site Logo" style="height:30px; width: 30px" />
+                </a>
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("WORKLY", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("TOP", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Jobs", "", "Jobs")</li>
+                </ul>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
@@ -33,7 +37,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year - VMMM</p>
         </footer>
     </div>
 
