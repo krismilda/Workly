@@ -1,0 +1,86 @@
+﻿
+@model IEnumerable<Workly.Models.Job>
+
+@{
+    ViewBag.Title = "";
+}
+
+<h2>Jobs List</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table" id="jobs">
+    <thead>
+            <th>Work</th>
+            <th>Field</th>
+            <th>Start</th>
+            <th>Locality</th>
+            <th>Salary</th>
+            <th>Duration</th>
+            <th></th>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script>
+        $(document).ready(function () {
+          var table=$("#jobs").dataTable({
+                ajax: {
+                    url: "/api/jobs",
+                    dataSrc: ""
+                },
+                    columns: [
+                        {
+                            data:"Work",
+                           render: function (data, type, job) {
+                                return "<a href='/jobs/edit/" + job.Id + "'>" + job.Work + "</a>";
+                            }
+                        },
+                    {
+                      data:"Field"
+                    },
+                    {
+                        data: "Start",
+                        render: function (data) {
+                            return data.substring(0, 10);
+                        }
+                    },
+                    {
+                        data: "Locality"
+                    },
+                    {
+                        data: "Salary"
+                    },
+                    {
+                        data: "Duration"
+                    },
+                    {
+                        data: "Id",
+                        render: function (data) {
+                            return "<button class='btn-link js-delete' data-job-id=" + data + ">Delete</button>";
+                        },
+                    }
+                    ]
+            });
+            $("#jobs").on("click",".js-delete", function () {
+                var button = $(this);
+
+                bootbox.confirm("Are you sure you want delete this job?", function (result) {
+                    if (result) {
+                        $.ajax({
+                            url: "/api/jobs/" + button.attr("data-job-id"),
+                            method: "DELETE",
+                            success: function () {
+                                table.api().row(button.parents("tr")).remove().draw();
+                            }
+                        })
+                    }
+                })
+            })
+
+        });
+    </script>
+}
