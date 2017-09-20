@@ -28,6 +28,7 @@ namespace Workly.Controllers
 
         // POST: Jobs/Create
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Create(Job job)
         {
             if (ModelState.IsValid)
