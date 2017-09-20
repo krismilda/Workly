@@ -29,7 +29,7 @@ namespace Workly
                       "~/Scripts/respond.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                       "~/Content/bootstrap.css",
+                       "~/Content/bootstrap-lumen.css",
                         "~/content/datatables/css/datatables.bootstrap.css",
                        "~/Content/site.css"));
         }
