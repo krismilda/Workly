@@ -9,6 +9,7 @@ namespace Workly.Models
     public class Review
     {
         public int ReviewId { get; set; }
+
         public int Stars { get; set; }
 
         [StringLength(2000)]

@@ -23,10 +23,10 @@
                 @Html.ActionLink("WORKLY", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav">                   
+                    <li>@Html.ActionLink("TOP", "Index", "Users")</li>
+                    <li>@Html.ActionLink("Jobs", "Index", "Jobs")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("TOP", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Jobs", "", "Jobs")</li>
                 </ul>
                 </ul>
                 @Html.Partial("_LoginPartial")
