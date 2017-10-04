@@ -15,6 +15,8 @@ namespace Workly.Controllers
     [Authorize]
     public class AccountController : Controller
     {
+        private JobSystemContext jobSystemContext = new JobSystemContext();
+
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
 
@@ -153,6 +155,11 @@ namespace Workly.Controllers
             {
                 var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
                 var result = await UserManager.CreateAsync(user, model.Password);
+                var worklyUser = new WorklyUser { Email = model.Email };
+
+                jobSystemContext.Users.Add(worklyUser);
+                jobSystemContext.SaveChanges();
+
                 if (result.Succeeded)
                 {
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);

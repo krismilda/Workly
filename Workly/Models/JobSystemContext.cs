@@ -19,6 +19,7 @@ namespace Workly.Models
         {
         }
 
-        public System.Data.Entity.DbSet<Workly.Models.Job> Jobs { get; set; }
+        public DbSet<Job> Jobs { get; set; }
+        public DbSet<WorklyUser> Users { get; set; }
     }
 }
