@@ -208,6 +208,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\JobsController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Dtos\JobDTO.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -216,6 +217,14 @@
     <Compile Include="Migrations\201709201631383_AddJob.Designer.cs">
       <DependentUpon>201709201631383_AddJob.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710041531084_default.cs" />
+    <Compile Include="Migrations\201710041531084_default.Designer.cs">
+      <DependentUpon>201710041531084_default.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710041541188_worklyUsers.cs" />
+    <Compile Include="Migrations\201710041541188_worklyUsers.Designer.cs">
+      <DependentUpon>201710041541188_worklyUsers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\DateIsGreaterThanToday.cs" />
@@ -223,6 +232,8 @@
     <Compile Include="Models\Job.cs" />
     <Compile Include="Models\JobSystemContext.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Review.cs" />
+    <Compile Include="Models\WorklyUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -462,6 +473,9 @@
     <Content Include="Views\Jobs\Create.cshtml" />
     <Content Include="Views\Jobs\Edit.cshtml" />
     <Content Include="Views\Jobs\Index.cshtml" />
+    <Content Include="Views\Users\Details.cshtml" />
+    <Content Include="Views\Users\Edit.cshtml" />
+    <Content Include="Views\Users\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -482,6 +496,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201709201631383_AddJob.resx">
       <DependentUpon>201709201631383_AddJob.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710041531084_default.resx">
+      <DependentUpon>201710041531084_default.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710041541188_worklyUsers.resx">
+      <DependentUpon>201710041541188_worklyUsers.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
