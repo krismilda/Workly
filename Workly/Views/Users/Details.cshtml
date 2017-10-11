@@ -1,44 +1,51 @@
 ﻿@model Workly.Models.WorklyUser
-
 @{
     ViewBag.Title = "Details";
 }
 
 <h2>Details</h2>
-
 <div>
-    <h4>WorklyUser</h4>
+    <h4>Movie</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
             @Html.DisplayNameFor(model => model.Email)
         </dt>
-
         <dd>
             @Html.DisplayFor(model => model.Email)
         </dd>
-
         <dt>
-            @Html.DisplayNameFor(model => model.Rating)
+            @Html.DisplayNameFor(model => model.Name)
         </dt>
-
         <dd>
-            @Html.DisplayFor(model => model.Rating)
+            @Html.DisplayFor(model => model.Name)
         </dd>
-
         <dt>
-            @Html.DisplayNameFor(model => model.Reviews)
+            @Html.DisplayNameFor(model => model.Surname)
         </dt>
-        @foreach (var item in Model.Reviews)
-        {
-            <dd>
-                @Html.DisplayFor(modelItem => item.Stars)
-                @Html.DisplayFor(modelItem => item.Comment)
-            </dd>
-        }
+        <dd>
+            @Html.DisplayFor(model => model.Surname)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Phone)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Review)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ReviewList[0].Comment)
+            @Html.DisplayFor(model => model.ReviewList[1].Comment)
+            @Html.DisplayFor(model => model.ReviewList[2].Comment)
+            @Html.DisplayFor(model => model.ReviewList[3].Comment)
+            @Html.DisplayFor(model => model.ReviewList[4].Comment)
+
+        </dd>
     </dl>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.WorklyUserId }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+<div>
+
+    <a asp-action="Index">Back to List</a>
+</div>

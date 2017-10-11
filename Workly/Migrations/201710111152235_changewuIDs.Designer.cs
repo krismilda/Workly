@@ -7,13 +7,13 @@ namespace Workly.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class _default : IMigrationMetadata
+    public sealed partial class changewuIDs : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(_default));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(changewuIDs));
         
         string IMigrationMetadata.Id
         {
-            get { return "201710041531084_default"; }
+            get { return "201710111152235_changewuIDs"; }
         }
         
         string IMigrationMetadata.Source

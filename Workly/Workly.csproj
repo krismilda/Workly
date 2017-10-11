@@ -213,17 +213,29 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201709201631383_AddJob.cs" />
-    <Compile Include="Migrations\201709201631383_AddJob.Designer.cs">
-      <DependentUpon>201709201631383_AddJob.cs</DependentUpon>
+    <Compile Include="Migrations\201710111051063_changewuID.cs" />
+    <Compile Include="Migrations\201710111051063_changewuID.Designer.cs">
+      <DependentUpon>201710111051063_changewuID.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201710041531084_default.cs" />
-    <Compile Include="Migrations\201710041531084_default.Designer.cs">
-      <DependentUpon>201710041531084_default.cs</DependentUpon>
+    <Compile Include="Migrations\201710111152235_changewuIDs.cs" />
+    <Compile Include="Migrations\201710111152235_changewuIDs.Designer.cs">
+      <DependentUpon>201710111152235_changewuIDs.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201710041541188_worklyUsers.cs" />
-    <Compile Include="Migrations\201710041541188_worklyUsers.Designer.cs">
-      <DependentUpon>201710041541188_worklyUsers.cs</DependentUpon>
+    <Compile Include="Migrations\201710111253182_ass.cs" />
+    <Compile Include="Migrations\201710111253182_ass.Designer.cs">
+      <DependentUpon>201710111253182_ass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710111559139_asasdg.cs" />
+    <Compile Include="Migrations\201710111559139_asasdg.Designer.cs">
+      <DependentUpon>201710111559139_asasdg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710111935304_changeRate.cs" />
+    <Compile Include="Migrations\201710111935304_changeRate.Designer.cs">
+      <DependentUpon>201710111935304_changeRate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710112020440_changeRates.cs" />
+    <Compile Include="Migrations\201710112020440_changeRates.Designer.cs">
+      <DependentUpon>201710112020440_changeRates.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -232,6 +244,7 @@
     <Compile Include="Models\Job.cs" />
     <Compile Include="Models\JobSystemContext.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Rating.cs" />
     <Compile Include="Models\Review.cs" />
     <Compile Include="Models\WorklyUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -494,14 +507,23 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201709201631383_AddJob.resx">
-      <DependentUpon>201709201631383_AddJob.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201710111051063_changewuID.resx">
+      <DependentUpon>201710111051063_changewuID.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201710041531084_default.resx">
-      <DependentUpon>201710041531084_default.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201710111152235_changewuIDs.resx">
+      <DependentUpon>201710111152235_changewuIDs.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201710041541188_worklyUsers.resx">
-      <DependentUpon>201710041541188_worklyUsers.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201710111253182_ass.resx">
+      <DependentUpon>201710111253182_ass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710111559139_asasdg.resx">
+      <DependentUpon>201710111559139_asasdg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710111935304_changeRate.resx">
+      <DependentUpon>201710111935304_changeRate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710112020440_changeRates.resx">
+      <DependentUpon>201710112020440_changeRates.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

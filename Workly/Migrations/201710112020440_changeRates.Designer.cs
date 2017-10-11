@@ -7,13 +7,13 @@ namespace Workly.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class worklyUsers : IMigrationMetadata
+    public sealed partial class changeRates : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(worklyUsers));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(changeRates));
         
         string IMigrationMetadata.Id
         {
-            get { return "201710041541188_worklyUsers"; }
+            get { return "201710112020440_changeRates"; }
         }
         
         string IMigrationMetadata.Source

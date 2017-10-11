@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNet.Identity;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
@@ -19,7 +20,7 @@ namespace Workly.Controllers
         {
             return View();
         }
-       
+
         // GET: Jobs/Create
         public ActionResult Create()
         {
@@ -33,6 +34,12 @@ namespace Workly.Controllers
         {
             if (ModelState.IsValid)
             {
+                string currentUserId = User.Identity.GetUserId();
+                var userId = User.Identity.GetUserName();
+                var currentUser = db.WorklyUsers.Where(u => u.Email == userId).ToList<WorklyUser>();
+                job.Name = currentUser[0].Name;
+                job.Phone = currentUser[0].Phone;
+                job.Surname = currentUser[0].Surname;
                 db.Jobs.Add(job);
                 db.SaveChanges();
                 return RedirectToAction("Index");
