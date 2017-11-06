@@ -205,10 +205,12 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\API\JobsController.cs" />
+    <Compile Include="Controllers\API\YourJobsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\JobsController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
+    <Compile Include="Controllers\YourJobsController.cs" />
     <Compile Include="Dtos\JobDTO.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -236,6 +238,10 @@
     <Compile Include="Migrations\201710112020440_changeRates.cs" />
     <Compile Include="Migrations\201710112020440_changeRates.Designer.cs">
       <DependentUpon>201710112020440_changeRates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711061548032_addUserIdColumn.cs" />
+    <Compile Include="Migrations\201711061548032_addUserIdColumn.Designer.cs">
+      <DependentUpon>201711061548032_addUserIdColumn.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -489,6 +495,11 @@
     <Content Include="Views\Users\Details.cshtml" />
     <Content Include="Views\Users\Edit.cshtml" />
     <Content Include="Views\Users\Index.cshtml" />
+    <Content Include="Views\YourJobs\Delete.cshtml" />
+    <Content Include="Views\YourJobs\Details.cshtml" />
+    <Content Include="Views\YourJobs\Edit.cshtml" />
+    <Content Include="Views\YourJobs\Index1.cshtml" />
+    <Content Include="Views\YourJobs\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -524,6 +535,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710112020440_changeRates.resx">
       <DependentUpon>201710112020440_changeRates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711061548032_addUserIdColumn.resx">
+      <DependentUpon>201711061548032_addUserIdColumn.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

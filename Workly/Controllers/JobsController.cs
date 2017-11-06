@@ -37,6 +37,7 @@ namespace Workly.Controllers
                 string currentUserId = User.Identity.GetUserId();
                 var userId = User.Identity.GetUserName();
                 var currentUser = db.WorklyUsers.Where(u => u.Email == userId).ToList<WorklyUser>();
+                job.UserId= User.Identity.GetUserId();
                 job.Name = currentUser[0].Name;
                 job.Phone = currentUser[0].Phone;
                 job.Surname = currentUser[0].Surname;

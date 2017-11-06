@@ -9,6 +9,7 @@ namespace Workly.Models
 {
     public class Job
     {
+        public string UserId { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
         public string Phone { get; set; }

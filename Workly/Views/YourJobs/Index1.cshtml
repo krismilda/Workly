@@ -29,7 +29,7 @@
         $(document).ready(function () {
           var table=$("#jobs").dataTable({
                 ajax: {
-                    url: "/api/jobs",
+                    url: "/api/YourJobs",
                     dataSrc: ""
                 },
                     columns: [
@@ -64,7 +64,7 @@
                         },
                     }
                     ]
-            });
+        });
             $("#jobs").on("click",".js-delete", function () {
                 var button = $(this);
 
@@ -80,7 +80,8 @@
                     }
                 })
             })
-
+           
+            })
         })
     </script>
 }
