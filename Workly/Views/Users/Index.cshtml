@@ -8,22 +8,24 @@
 
 <table class="table">
     <tr>
-        <th>
+        <th style="background-color: #C9C7C7">
             @Html.DisplayNameFor(model => model.Email)
         </th>
-        <th>
+        <th style="background-color: #C9C7C7">
             @Html.DisplayNameFor(model => model.Name)
         </th>
-        <th>
+        <th style="background-color: #C9C7C7">
             @Html.DisplayNameFor(model => model.Surname)
         </th>
-        <th>
+        <th style="background-color: #C9C7C7">
             @Html.DisplayNameFor(model => model.Rating)
         </th>
+        <th style="background-color: #C9C7C7">rekvizitai.lt rating</th>
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
+@foreach (var item in Model)
+{
     <tr>
         <td>
             @Html.DisplayFor(modelItem => item.Email)
@@ -37,11 +39,14 @@
         <td>
             @Html.DisplayFor(modelItem => item.Rating.Average)
         </td>
-
+        <td>
+            8
+        </td>
         <td>
             @Html.ActionLink("Add Review", "Edit", new { id=item.WorklyUserId }) |
             @Html.ActionLink("Details", "Details", new { id=item.WorklyUserId }) |
         </td>
+
     </tr>
 }
 

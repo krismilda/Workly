@@ -154,13 +154,14 @@ namespace Workly.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email, Name = model.Name, Surname = model.Surname, Phone = model.Phone };
+                var user = new ApplicationUser { UserName = model.Email, Email = model.Email, Name = model.Name, Surname = model.Surname, Phone = model.Phone};
                 var result = await UserManager.CreateAsync(user, model.Password);
+                await UserManager.AddToRoleAsync(user.Id, model.Role);
                 Rating rating = new Rating();
                 rating.Sum = 5;
                 rating.Times = 1;
                 rating.Average = 5;
-                var worklyUser = new WorklyUser { Email = model.Email, Name = model.Name, Surname = model.Surname, Phone = model.Phone, Rating=rating};
+                var worklyUser = new WorklyUser { Email = model.Email, Name = model.Name, Surname = model.Surname, Phone = model.Phone, Rating=rating, Role=model.Role};
                 var tempList = new List<Review>();
                 var rev = new Review();
                 ///

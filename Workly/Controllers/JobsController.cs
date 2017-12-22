@@ -48,6 +48,20 @@ namespace Workly.Controllers
             return View(job);
         }
 
+        public ActionResult Checked(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Job job = db.Jobs.Find(id);
+            if (job == null)
+            {
+                return HttpNotFound();
+            }
+            return View(job);
+        }
+
         // GET: Jobs/Edit/5
         public ActionResult Edit(int? id)
         {

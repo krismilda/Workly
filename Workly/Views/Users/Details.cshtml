@@ -2,46 +2,72 @@
 @{
     ViewBag.Title = "Details";
 }
+<h1>Information</h1>
+<table class="table" style="border:2px solid black; border-collapse:collapse; width:200px">
 
-<h2>Details</h2>
-<div>
-    <h4>Movie</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
+    <tr>
+        <td style="border:2px solid black; border-collapse:collapse; background-color: #C9C7C7">
             @Html.DisplayNameFor(model => model.Email)
-        </dt>
-        <dd>
+        </td>
+        <td style="border:2px solid black; border-collapse:collapse">
             @Html.DisplayFor(model => model.Email)
-        </dd>
-        <dt>
+        </td>
+    </tr>
+    <tr>
+        <td style="border:2px solid black; border-collapse:collapse ; background-color: #C9C7C7">
             @Html.DisplayNameFor(model => model.Name)
-        </dt>
-        <dd>
+        </td>
+        <td style="border:2px solid black; border-collapse:collapse">
             @Html.DisplayFor(model => model.Name)
-        </dd>
-        <dt>
+        </td>
+    </tr>
+    <tr>
+        <td style="border:2px solid black; border-collapse:collapse ; background-color: #C9C7C7">
             @Html.DisplayNameFor(model => model.Surname)
-        </dt>
-        <dd>
+        </td>
+        <td style="border:2px solid black; border-collapse:collapse">
             @Html.DisplayFor(model => model.Surname)
-        </dd>
-        <dt>
+        </td>
+    </tr>
+    <tr>
+        <td style="border:2px solid black; border-collapse:collapse; background-color: #C9C7C7">
             @Html.DisplayNameFor(model => model.Phone)
-        </dt>
-        <dd>
+        </td>
+        <td style="border:2px solid black; border-collapse:collapse">
             @Html.DisplayFor(model => model.Phone)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Review)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.ReviewList[0].Comment)
-            @Html.DisplayFor(model => model.ReviewList[1].Comment)
-        </dd>
-    </dl>
-</div>
-<div>
+        </td>
+    </tr>
+    <tr>
+        <td style="border:2px solid black; border-collapse:collapse; background-color: #C9C7C7">
+            @Html.DisplayNameFor(model => model.Rating)
+        </td>
+        <td style="border:2px solid black; border-collapse:collapse">
+            @Html.DisplayFor(m => m.Rating.Average)
+        </td>
+    </tr>
+        @for (int i = 0; i < Model.ReviewList.Count; i++)
+        {
+            if (i == 0)
+            {
+                <tr>
+                    <td style="border:2px solid black; border-collapse:collapse; background-color: #C9C7C7">
+                        @Html.DisplayNameFor(model => model.Review)
+                    </td>
 
-    <a asp-action="Index">Back to List</a>
-</div>
+                    <td style="border:2px solid black; border-collapse:collapse">
+                        @Html.DisplayFor(model => model.ReviewList[0].Comment)
+                    </td>
+                </tr>
+            }
+            else
+            {
+                <tr>
+                    <td style="border:2px solid black; border-collapse:collapse; background-color: #C9C7C7"></td>
+                    <td style="border:2px solid black; border-collapse:collapse">
+                        @Html.DisplayFor(model => model.ReviewList[i].Comment)
+                    </td>
+                </tr>
+            }
+        }
+       
+</table>

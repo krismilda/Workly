@@ -24,5 +24,6 @@ namespace Workly.Models
         public DbSet<Job> Jobs { get; set; }
         public DbSet<WorklyUser> WorklyUsers { get; set; }
         public DbSet<Review> Review { get; set; }
+        public DbSet<InterestedJobs> InterestedJobs { get; set; }
     }
 }

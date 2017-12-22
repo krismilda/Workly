@@ -12,13 +12,12 @@
 </p>
 <table class="table" id="jobs">
     <thead>
-            <th>Work</th>
-            <th>Field</th>
-            <th>Start</th>
-            <th>Locality</th>
-            <th>Salary</th>
-            <th>Duration</th>
-            <th></th>
+            <th style="background-color: #C9C7C7">Work</th>
+            <th style="background-color: #C9C7C7">Field</th>
+            <th style="background-color: #C9C7C7">Start</th>
+            <th style="background-color: #C9C7C7">Locality</th>
+            <th style="background-color: #C9C7C7">Salary</th>
+            <th style="background-color: #C9C7C7">Duration</th>
     </thead>
     <tbody>
     </tbody>
@@ -32,7 +31,7 @@
                     url: "/api/jobs",
                     dataSrc: ""
                 },
-                    columns: [
+                columns: [
                         {
                             data:"Work",
                            render: function (data, type, job) {
@@ -56,12 +55,6 @@
                     },
                     {
                         data: "Duration"
-                    },
-                    {
-                        data: "Id",
-                        render: function (data) {
-                            return "<button class='btn-link js-delete' data-job-id=" + data + ">Delete</button>";
-                        },
                     }
                     ]
             });

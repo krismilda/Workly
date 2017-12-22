@@ -7,12 +7,12 @@ namespace Workly.Migrations
     {
         public override void Up()
         {
-            AddColumn("dbo.Jobs", "UserId", c => c.String());
+        //    AddColumn("dbo.Jobs", "UserId", c => c.String());
         }
         
         public override void Down()
         {
-            DropColumn("dbo.Jobs", "UserId");
+        //    DropColumn("dbo.Jobs", "UserId");
         }
     }
 }

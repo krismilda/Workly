@@ -16,5 +16,6 @@ namespace Workly.Models
         public Rating Rating { get; set; }
         public Review Review { get; set; }
         public List<Review> ReviewList { get; set; }
+        public string Role { get; set; }
     }
 }

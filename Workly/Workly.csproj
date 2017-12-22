@@ -207,6 +207,7 @@
     <Compile Include="Controllers\API\JobsController.cs" />
     <Compile Include="Controllers\API\YourJobsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InterestedJobsController.cs" />
     <Compile Include="Controllers\JobsController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
@@ -243,10 +244,23 @@
     <Compile Include="Migrations\201711061548032_addUserIdColumn.Designer.cs">
       <DependentUpon>201711061548032_addUserIdColumn.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201712171945165_SeedUsers.cs" />
+    <Compile Include="Migrations\201712171945165_SeedUsers.Designer.cs">
+      <DependentUpon>201712171945165_SeedUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712221918195_addInterested.cs" />
+    <Compile Include="Migrations\201712221918195_addInterested.Designer.cs">
+      <DependentUpon>201712221918195_addInterested.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712222109304_addRole.cs" />
+    <Compile Include="Migrations\201712222109304_addRole.Designer.cs">
+      <DependentUpon>201712222109304_addRole.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\DateIsGreaterThanToday.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\InterestedJobs.cs" />
     <Compile Include="Models\Job.cs" />
     <Compile Include="Models\JobSystemContext.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -500,6 +514,7 @@
     <Content Include="Views\YourJobs\Edit.cshtml" />
     <Content Include="Views\YourJobs\Index1.cshtml" />
     <Content Include="Views\YourJobs\Index.cshtml" />
+    <Content Include="Views\InterestedJobs\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -538,6 +553,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711061548032_addUserIdColumn.resx">
       <DependentUpon>201711061548032_addUserIdColumn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712171945165_SeedUsers.resx">
+      <DependentUpon>201712171945165_SeedUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712221918195_addInterested.resx">
+      <DependentUpon>201712221918195_addInterested.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712222109304_addRole.resx">
+      <DependentUpon>201712222109304_addRole.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -23,13 +23,22 @@
                 @Html.ActionLink("WORKLY", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">                   
-                    <li>@Html.ActionLink("TOP", "Index", "Users")</li>
-                    <li>@Html.ActionLink("Jobs", "Index", "Jobs")</li>
+                <ul class="nav navbar-nav">   
                     <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Interested jobs", "Interested jobs", "Home")</li>
-                    <li>@Html.ActionLink("Your jobs", "Index", "YourJobs")</li>
-                </ul>
+                    @if (User.IsInRole("Employee") || User.IsInRole("Employer"))
+                    {
+                        <li>@Html.ActionLink("TOP", "Index", "Users")</li>
+                        <li>@Html.ActionLink("Jobs", "Index", "Jobs")</li>
+                    }
+                    @if (User.IsInRole("Employee"))
+                    {
+                        <li>@Html.ActionLink("Interested jobs", "Index", "InterestedJobs")</li>
+                    }
+                    @if (User.IsInRole("Employer"))
+                    {
+                        <li>@Html.ActionLink("Your jobs", "Index", "YourJobs")</li>
+                    }
+                  
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>

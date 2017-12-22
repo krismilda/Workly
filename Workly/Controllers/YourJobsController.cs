@@ -16,6 +16,7 @@ namespace Workly.Controllers
     public class YourJobsController : Controller
     {
         private JobSystemContext db = new JobSystemContext();
+        [Authorize(Roles ="Employer")]
         public ActionResult Index()
         {
             string id = User.Identity.GetUserId();

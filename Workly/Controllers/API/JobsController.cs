@@ -23,7 +23,8 @@ namespace Workly.Controllers.API
         [HttpGet]
         public IEnumerable<JobDTO> GetJobs()
         {
-            return _context.Jobs.ToList().Select(Mapper.Map<Job, JobDTO>);
+            var s = _context.Jobs.ToList();
+            return s.Select(Mapper.Map<Job, JobDTO>);
         }
 
         //GET /api/jobs/id
